@@ -37,6 +37,7 @@ class App extends React.Component {
 
   addFish = fish => {
     const fishes = { ...this.state.fishes };
+    fish.price = parseFloat(fish.price);
     fishes[`fish${Date.now()}`] = fish;
     this.setState({ fishes: fishes });
     event.currentTarget.reset();
