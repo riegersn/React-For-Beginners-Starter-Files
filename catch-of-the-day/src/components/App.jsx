@@ -35,12 +35,12 @@ class App extends React.Component {
     base.removeBinding(this.ref);
   }
 
-  addFish = fish => {
+  addFish = (evt, fish) => {
     const fishes = { ...this.state.fishes };
     fish.price = parseFloat(fish.price);
     fishes[`fish${Date.now()}`] = fish;
     this.setState({ fishes: fishes });
-    event.currentTarget.reset();
+    evt.currentTarget.reset();
     console.log("added a 🐟", fish);
   };
 

@@ -12,8 +12,8 @@ class AddFishForm extends React.Component {
     addFish: PropTypes.func
   };
 
-  createFish = event => {
-    event.preventDefault();
+  createFish = evt => {
+    evt.preventDefault();
     const fish = {
       name: this.nameRef.current.value,
       price: parseFloat(this.priceRef.current.value),
@@ -22,7 +22,7 @@ class AddFishForm extends React.Component {
       image: this.imageRef.current.value
     };
 
-    this.props.addFish(fish);
+    this.props.addFish(evt, fish);
   };
 
   render() {

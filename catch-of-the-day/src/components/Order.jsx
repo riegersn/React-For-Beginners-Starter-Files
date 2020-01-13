@@ -36,8 +36,8 @@ class Order extends React.Component {
       );
     }
     return (
-      <CSSTransition {...transitionOptions}>
-        <li key={key}>
+      <CSSTransition {...transitionOptions} key={key}>
+        <li>
           <span>
             <TransitionGroup component="span" className="count">
               <CSSTransition
